@@ -8,11 +8,12 @@ with open("video_game_predict_model.pkl", "rb") as file:
     
 
 def predict_global_sales(Rank, Name, Platform,Year, Genre, Publisher):
+    Game_Age = 2026 - Year
     input_df = pd.DataFrame([[
-        Rank, Name, Platform,Year, Genre, Publisher
+        Rank, Name, Platform,Year, Genre, Publisher, Game_Age
     ]],
     columns= [
-        'Rank', 'Name', 'Platform', 'Year','Genre', 'Publisher'
+        'Rank', 'Name', 'Platform', 'Year','Genre', 'Publisher', 'Game_Age'
     ]                        
     )
     
