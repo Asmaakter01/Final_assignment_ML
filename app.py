@@ -17,7 +17,7 @@ def predict_global_sales(Rank, Name, Platform,Year, Genre, Publisher):
     )
     
     prediction = model.predict(input_df)[0]
-    return f"Predicted Sales Result: {prediction:.2f}"
+    return f"Predicted Sales Result: {prediction:.2f} millions"
 
 inputs = [
     gr.Number(label='Rank'),
